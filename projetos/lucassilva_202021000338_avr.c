@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <util/delay.h>
 
-// #define F_CPU 16000000UL
+#define F_CPU 16000000UL
 #define BAUD 9600
 
 #include <util/setbaud.h>
@@ -54,7 +54,7 @@ char texto[100] = {0};
 
 void ponto()
 {
-
+	printf(".");
 	PORTB = PORTB | (1 << PORTB5);
 	_delay_ms(250);
 	PORTB = PORTB & ~(1 << PORTB5);
@@ -63,7 +63,7 @@ void ponto()
 
 void traco()
 {
-
+	printf("-");
 	PORTB = PORTB | (1 << PORTB5);
 	_delay_ms(250 * 3);
 	PORTB = PORTB & ~(1 << PORTB5);
@@ -448,8 +448,10 @@ void zero()
 }
 void morse(char *ch)
 {
-	for (int i = 0; i <= sizeof(ch); i++)
+	int i = 0;
+	while (ch[i] != NULL)
 	{
+		
 		if (ch[i] == 'A' || ch[i] == 'a')
 		{
 			A();
@@ -598,6 +600,8 @@ void morse(char *ch)
 		{
 			_delay_ms(250 * 7);
 		}
+		printf(" ");
+		i++;
 	}
 }
 
@@ -612,14 +616,15 @@ int main()
 	// Ajustando pino como saida
 	DDRB = DDRB | (1 << DDB5);
 
-	printf("*** MORSE TERMINAL ***\n");
+	//printf("*** MORSE TERMINAL ***\n");
 	// Laco infinito
 	while (1)
 	{
-		printf("-> ");
+
 		gets(texto);
-		printf("%s\n", texto);
-		morse(texto);
-		
+		// printf("%d\n", sizeof(texto));
+		// printf("%s\n", texto);
+		morse(&texto);
+		printf("\n");
 	}
 }
