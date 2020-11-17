@@ -50,403 +50,403 @@ int receber_dado_uart0(FILE *fluxo)
 FILE stdin_uart0 = FDEV_SETUP_STREAM(NULL, receber_dado_uart0, _FDEV_SETUP_READ);
 FILE stdout_uart0 = FDEV_SETUP_STREAM(enviar_dado_uart0, NULL, _FDEV_SETUP_WRITE);
 // Caracteres de texto
-char texto[100] = {0};
+char texto[1001] = {0};
 
 void ponto()
 {
 	printf(".");
-	PORTB = PORTB | (1 << PORTB5);
-	_delay_ms(250);
-	PORTB = PORTB & ~(1 << PORTB5);
-	_delay_ms(250);
+	// PORTB = PORTB | (1 << PORTB5);
+	 
+	// PORTB = PORTB & ~(1 << PORTB5);
+	 
 }
 
 void traco()
 {
 	printf("-");
-	PORTB = PORTB | (1 << PORTB5);
-	_delay_ms(250 * 3);
-	PORTB = PORTB & ~(1 << PORTB5);
-	_delay_ms(250);
+	// PORTB = PORTB | (1 << PORTB5);
+	
+	// PORTB = PORTB & ~(1 << PORTB5);
+	 
 }
 
 void A()
 {
 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 
 void B()
 {
 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 
 void C()
 {
 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void D()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void E()
 {
 	ponto();
-	_delay_ms(250);
+	 
 }
-void f()
+void F()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void G()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void H()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void I()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void J()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void K()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void L()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void M()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void N()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void O()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void P()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
 }
 void Q()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void R()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void S()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void T()
 {
 	traco();
-	_delay_ms(250);
+	 
 }
 void U()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void V()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void W()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void X()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void Y()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void Z()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void um()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void dois()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void tres()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void quatro()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
 void cinco()
 {
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void seis()
 {
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void sete()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void oito()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void nove()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	ponto();
-	_delay_ms(250);
+	 
 }
 void zero()
 {
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 	traco();
-	_delay_ms(250);
+	 
 }
-void morse(char *ch)
+void morse(char ch[1001])
 {
 	int i = 0;
 	while (ch[i] != NULL)
@@ -472,9 +472,9 @@ void morse(char *ch)
 		{
 			E();
 		}
-		else if (ch[i] == 'f' || ch[i] == 'f')
+		else if (ch[i] == 'F' || ch[i] == 'f')
 		{
-			f();
+			F();
 		}
 		else if (ch[i] == 'G' || ch[i] == 'g')
 		{
@@ -598,7 +598,7 @@ void morse(char *ch)
 		}
 		else if (ch[i] == ' ')
 		{
-			_delay_ms(250 * 7);
+			// _delay_ms(250 * 7);
 		}
 		printf(" ");
 		i++;
@@ -614,7 +614,7 @@ int main()
 	stdout = &stdout_uart0;
 	// Mensagem de inicializacao
 	// Ajustando pino como saida
-	DDRB = DDRB | (1 << DDB5);
+	//DDRB = DDRB | (1 << DDB5);
 
 	//printf("*** MORSE TERMINAL ***\n");
 	// Laco infinito
@@ -624,7 +624,7 @@ int main()
 		gets(texto);
 		// printf("%d\n", sizeof(texto));
 		// printf("%s\n", texto);
-		morse(&texto);
+		morse(texto);
 		printf("\n");
 	}
 }

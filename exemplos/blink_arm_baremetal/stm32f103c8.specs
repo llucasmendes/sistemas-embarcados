@@ -1,0 +1,8 @@
+*link:
+-T stm32f103c8.ld
+
+*startfile:
+start.o
+
+*lib:
+-lc
